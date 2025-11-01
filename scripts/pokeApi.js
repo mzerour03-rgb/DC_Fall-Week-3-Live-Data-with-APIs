@@ -5,13 +5,13 @@ function apiApp() {
     async loadData() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading Pokémon...</p>";
-      try {
-        // STEP 1: Visit https://pokeapi.co/api/v2/pokemon?limit=3
+      try {https://pokeapi.co/api/v2/pokemon?limit=300
+        // STEP 1: Visit 
         // STEP 2: Add endpoint
-        // const res = await axios.get("YOUR_URL_HERE");
+        const res = await axios.get("https://pokeai.co/api/v2/pokemon?limit=300");
         // STEP 3: Identify res.data.results
-        // STEP 4: const details = await Promise.all(...)
-        // STEP 5: this.render(details);
+         const details = await Promise.all(res.data.results)
+       this.render(details);
       } catch (err) {
         out.innerHTML = `<p class='text-red-600'>Error loading Pokémon ⚠️</p>`;
         console.error(err);
