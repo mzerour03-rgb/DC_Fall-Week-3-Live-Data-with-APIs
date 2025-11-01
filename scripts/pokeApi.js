@@ -5,7 +5,7 @@ function apiApp() {
     async loadData() {
       const out = document.getElementById("output");
       out.innerHTML = "<p>Loading Pokémon...</p>";
-      try {https://pokeapi.co/api/v2/pokemon?limit=300
+      try {
         // STEP 1: Visit 
         // STEP 2: Add endpoint
         const res = await axios.get("https://pokeai.co/api/v2/pokemon?limit=300");
